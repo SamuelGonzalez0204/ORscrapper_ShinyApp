@@ -48,18 +48,13 @@ ui <- fluidPage(
     }
     "
   ),
-  div(id = "splash",
-      div(id = "splash-content",
-          h1("¡Presiona espacio para comenzar!"),
-          img(src = "logoInicio2.png", alt = "Logo")
-      )
-  ),
+
   conditionalPanel(
     condition = "!(document.getElementById('splash').style.display === 'flex')",
     fluidPage(
       
       titlePanel(
-        img(src = "LogoSACYL.png", align = "left", height = 40, width = 300),
+        #img(src = "LogoSACYL.png", align = "left", height = 40, width = 300),
         #img(src = "LogoUBU.png", align = "right", height = 50, width = 100)
         h1("PDF-Scrapping: Shiny app", style = "font-weight: 300; text-align: center; padding: 20px")
       ),
@@ -703,4 +698,5 @@ shinyApp(ui = ui, server = server)
 #  cat(pdf_content, sep = "\n")
 #})
 #})
+
 #observeEvent(input$Analizar, {
